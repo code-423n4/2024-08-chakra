@@ -54,16 +54,13 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 ---
 
 # Chakra audit details
-- Total Prize Pool: $67500 in USDC
-  - HM awards: $49450 in USDC
-  - (remove this line if there is no Analysis pool) Analysis awards: XXX XXX USDC (Notion: Analysis pool)
-  - QA awards: $2050 in USDC
-  - (remove this line if there is no Bot race) Bot Race awards: XXX XXX USDC (Notion: Bot Race pool)
- 
-  - Judge awards: $5000 in USDC
-  - Validator awards: XXX XXX USDC (Notion: Triage fee - final)
+- Total Prize Pool: $67,500 in USDC
+  - HM awards: $49,450 in USDC
+  - QA awards: $2,050 in USDC
+  - Judge awards: $5,000 in USDC
+  - Validator awards: 3,000 USDC 
   - Scout awards: $500 in USDC
-  - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC (*Opportunity goes to top 3 backstage wardens based on placement in this audit who RSVP.*)
+  - Mitigation Review: $7,500 in USDC (*Opportunity goes to top 3 backstage wardens based on placement in this audit who RSVP.*)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts August 28, 2024 20:00 UTC
 - Ends September 11, 2024 20:00 UTC
@@ -71,8 +68,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 ## Automated Findings / Publicly Known Issues
 
 The 4naly3er report can be found [here](https://github.com/code-423n4/2024-08-chakra/blob/main/4naly3er-report.md).
-
-
 
 _Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
 
