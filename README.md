@@ -75,10 +75,214 @@ The 4naly3er report can be found [here](https://github.com/code-423n4/2024-08-ch
 
 
 _Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
-## 🐺 C4: Begin Gist paste here (and delete this line)
+
+It’s possible for Core Governance and the elections to schedule the same operation in timelocks, and therefore block each other. 
+
+✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
+
+# Overview
+
+[ ⭐️ SPONSORS: add info here ]
+
+## Links
+
+- **Previous audits:**  
+  - ✅ SCOUTS: If there are multiple report links, please format them in a list.
+- **Documentation:** https://s3labs.notion.site/Contract-Design-Document-f4aa296f71fb40b1818c0890c40be55c?pvs=4
+- **Website:** 🐺 CA: add a link to the sponsor's website
+- **X/Twitter:** 🐺 CA: add a link to the sponsor's Twitter
+- **Discord:** 🐺 CA: add a link to the sponsor's Discord
+
+---
+
+# Scope
+
+[ ✅ SCOUTS: add scoping and technical details here ]
+
+### Files in scope
+- ✅ This should be completed using the `metrics.md` file
+- ✅ Last row of the table should be Total: SLOC
+- ✅ SCOUTS: Have the sponsor review and and confirm in text the details in the section titled "Scoping Q amp; A"
+
+*For sponsors that don't use the scoping tool: list all files in scope in the table below (along with hyperlinks) -- and feel free to add notes to emphasize areas of focus.*
+
+| Contract | SLOC | Purpose | Libraries used |  
+| ----------- | ----------- | ----------- | ----------- |
+| [contracts/folder/sample.sol](https://github.com/code-423n4/repo-name/blob/contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+
+### Files out of scope
+✅ SCOUTS: List files/directories out of scope
+
+## Scoping Q &amp; A
+
+### General questions
+### Are there any ERC20's in scope?: Yes
+
+✅ SCOUTS: If the answer above 👆 is "Yes", please add the tokens below 👇 to the table. Otherwise, update the column with "None".
+
+Any (all possible ERC20s)
 
 
+### Are there any ERC777's in scope?: Yes
 
+✅ SCOUTS: If the answer above 👆 is "Yes", please add the tokens below 👇 to the table. Otherwise, update the column with "None".
+
+any
+
+### Are there any ERC721's in scope?: Yes
+
+✅ SCOUTS: If the answer above 👆 is "Yes", please add the tokens below 👇 to the table. Otherwise, update the column with "None".
+
+any
+
+### Are there any ERC1155's in scope?: Yes
+
+✅ SCOUTS: If the answer above 👆 is "Yes", please add the tokens below 👇 to the table. Otherwise, update the column with "None".
+
+anty
+
+✅ SCOUTS: Once done populating the table below, please remove all the Q/A data above.
+
+| Question                                | Answer                       |
+| --------------------------------------- | ---------------------------- |
+| ERC20 used by the protocol              |       🖊️             |
+| Test coverage                           | ✅ SCOUTS: Please populate this after running the test coverage command                          |
+| ERC721 used  by the protocol            |            🖊️              |
+| ERC777 used by the protocol             |           🖊️                |
+| ERC1155 used by the protocol            |              🖊️            |
+| Chains the protocol will be deployed on | Ethereum,Base,Arbitrum,BSC,Optimism,Polygon,zkSync |
+
+### ERC20 token behaviors in scope
+
+| Question                                                                                                                                                   | Answer |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| [Missing return values](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#missing-return-values)                                                      |   Out of scope  |
+| [Fee on transfer](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#fee-on-transfer)                                                                  |  Out of scope  |
+| [Balance changes outside of transfers](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#balance-modifications-outside-of-transfers-rebasingairdrops) | Out of scope    |
+| [Upgradeability](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#upgradable-tokens)                                                                 |   Out of scope  |
+| [Flash minting](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#flash-mintable-tokens)                                                              | Out of scope    |
+| [Pausability](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#pausable-tokens)                                                                      | Out of scope    |
+| [Approval race protections](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#approval-race-protections)                                              | Out of scope    |
+| [Revert on approval to zero address](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#revert-on-approval-to-zero-address)                            | Out of scope    |
+| [Revert on zero value approvals](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#revert-on-zero-value-approvals)                                    | Out of scope    |
+| [Revert on zero value transfers](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#revert-on-zero-value-transfers)                                    | Out of scope    |
+| [Revert on transfer to the zero address](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#revert-on-transfer-to-the-zero-address)                    | Out of scope    |
+| [Revert on large approvals and/or transfers](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#revert-on-large-approvals--transfers)                  | Out of scope    |
+| [Doesn't revert on failure](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#no-revert-on-failure)                                                   |  Out of scope   |
+| [Multiple token addresses](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#revert-on-zero-value-transfers)                                          | Out of scope    |
+| [Low decimals ( < 6)](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#low-decimals)                                                                 |   Out of scope  |
+| [High decimals ( > 18)](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#high-decimals)                                                              | Out of scope    |
+| [Blocklists](https://github.com/d-xo/weird-erc20?tab=readme-ov-file#tokens-with-blocklists)                                                                | Out of scope    |
+
+### External integrations (e.g., Uniswap) behavior in scope:
+
+
+| Question                                                  | Answer |
+| --------------------------------------------------------- | ------ |
+| Enabling/disabling fees (e.g. Blur disables/enables fees) | No   |
+| Pausability (e.g. Uniswap pool gets paused)               |  Yes   |
+| Upgradeability (e.g. Uniswap gets upgraded)               |   Yes  |
+
+
+### EIP compliance checklist
+N/A
+
+✅ SCOUTS: Please format the response above 👆 using the template below👇
+
+| Question                                | Answer                       |
+| --------------------------------------- | ---------------------------- |
+| src/Token.sol                           | ERC20, ERC721                |
+| src/NFT.sol                             | ERC721                       |
+
+
+# Additional context
+
+## Main invariants
+
+- **In  Settlement Handler Contract**
+    - Only the owner can add or remove handlers from the whitelist for a given chain.
+    - The contract's mode (MintBurn, LockUnlock, LockMint, or BurnUnlock) is set during initialization and determines how tokens are handled during cross-chain transactions.
+    - Cross-chain ERC20 settlements can only be initiated with a valid amount (greater than 0), a valid recipient address, a valid handler address, and a valid token address.
+    - The nonce for each sender is incremented with each cross-chain transaction to ensure uniqueness of transaction IDs.
+    - Cross-chain transaction IDs are uniquely generated based on the source and destination chain information, sender, handler addresses, and nonce.
+    - Only the settlement contract can call the `receive_cross_chain_msg` and `receive_cross_chain_callback` functions.
+    - The handler receiving a cross-chain message must be on the whitelist for the source chain.
+    - The contract only accepts valid payload types (in this case, only ERC20 payloads).
+    - The contract's behavior (minting, burning, locking, or unlocking tokens) is consistent with its initialized mode for both outgoing and incoming cross-chain transactions.
+    - Cross-chain transaction statuses are properly tracked and updated (Pending, Settled, or Failed).
+    - The contract ensures sufficient token balance before performing transfers, burns, or unlocks.
+    - The contract uses safe transfer methods to move tokens, checking balances before transfers.
+    - Only the specified token contract (set during initialization) can be used for transfers, mints, and burns within this handler.
+    - The contract maintains a consistent state between locking/burning tokens on the source chain and minting/unlocking on the destination chain, depending on the settlement mode.
+    - The contract uses a codec to consistently encode and decode ERC20 transfer payloads across chains.
+- **In Settlement Contract**
+    1. The contract can only be initialized once due to the use of the `initializer` modifier.
+    2. Cross-chain transactions are uniquely identified by their `txid`, which is derived from a combination of chain names, addresses, and nonce.
+    3. The nonce for each `from_address` is incremented for every new cross-chain message sent, ensuring uniqueness of transactions.
+    4. Cross-chain messages can only be sent through the `send_cross_chain_msg` function, which creates a new entry in the `create_cross_txs` mapping.
+    5. Received cross-chain messages are verified using signatures before being processed.
+    6. A cross-chain message can only be received once. The status of a received transaction in `receive_cross_txs` must be `CrossChainMsgStatus.Unknow` before it can be processed.
+    7. The status of a received cross-chain message can only transition from `Unknow` to either `Success` or `Failed`.
+    8. Cross-chain callbacks can only be processed for transactions that have a `Pending` status in the `create_cross_txs` mapping.
+    9. The status of a created cross-chain transaction can only transition from `Pending` to either the received status or `Failed`.
+    10. Signature verification is required for both receiving cross-chain messages and cross-chain callbacks.
+    11. Only valid settlement handlers can process received cross-chain messages and callbacks.
+    12. The contract maintains separate mappings for created (`create_cross_txs`) and received (`receive_cross_txs`) cross-chain transactions.
+    13. Events are emitted for all major cross-chain operations: message sending, message receiving, and callback processing.
+    14. The contract relies on an external signature verifier (`signature_verifier`) for validating signatures.
+    15. The contract inherits from `BaseSettlement`, implying it adheres to any invariants defined in that base contract.
+
+✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
+
+## Attack ideas (where to focus for bugs)
+None
+
+✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
+
+## All trusted roles in the protocol
+
+Operator
+
+✅ SCOUTS: Please format the response above 👆 using the template below👇
+
+| Role                                | Description                       |
+| --------------------------------------- | ---------------------------- |
+| Owner                          | Has superpowers                |
+| Administrator                             | Can change fees                       |
+
+## Describe any novel or unique curve logic or mathematical models implemented in the contracts:
+
+N/A
+
+✅ SCOUTS: Please format the response above 👆 so its not a wall of text and its readable.
+
+## Running tests
+
+git clone https://github.com/Generative-Labs/chakra-settlement-contracts.git
+git checkout audit
+
+✅ SCOUTS: Please format the response above 👆 using the template below👇
+
+```bash
+git clone https://github.com/code-423n4/2023-08-arbitrum
+git submodule update --init --recursive
+cd governance
+foundryup
+make install
+make build
+make sc-election-test
+```
+To run code coverage
+```bash
+make coverage
+```
+To run gas benchmarks
+```bash
+make gas
+```
+
+✅ SCOUTS: Add a screenshot of your terminal showing the gas report
+✅ SCOUTS: Add a screenshot of your terminal showing the test coverage
 
 
 # Scope
@@ -142,4 +346,9 @@ _Note for C4 wardens: Anything included in this `Automated Findings / Publicly K
 | ./solidity/settlement/contracts/tests/MyTokenUpgradeTest.t.sol |
 | ./solidity/settlement/contracts/tests/TokenRoles.t.sol |
 | Totals: 25 |
+
+## Miscellaneous
+Employees of Chakra and employees' family members are ineligible to participate in this audit.
+
+Code4rena's rules cannot be overridden by the contents of this README. In case of doubt, please check with C4 staff.
 
