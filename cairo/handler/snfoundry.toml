@@ -1,0 +1,4 @@
+# cat ~/.starknet_accounts/starknet_open_zeppelin_accounts.json
+[sncast.default]
+account = "sepolia_test"
+url = "https://starknet-sepolia.g.alchemy.com/v2/LXvDqf0_13UQqdphjoE3Pn1Ll_2Aw5Wv"
