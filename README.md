@@ -156,55 +156,40 @@ npx hardhat coverage
 
 ### Files in scope
 
-| File   | Logic Contracts | Interfaces | nSLOC | Purpose | Libraries used |
-| ------ | --------------- | ---------- | ----- | -----   | ------------ |
-| /solidity/handler/contracts/BaseSettlementHandler.sol | 1| **** | 95 | |contracts/interfaces/ISettlement.sol<br>contracts/interfaces/IERC20CodecV1.sol<br>contracts/interfaces/ISettlementSignatureVerifier.sol<br>contracts/libraries/AddressCast.sol<br>contracts/libraries/Message.sol<br>contracts/libraries/MessageV1Codec.sol<br>@openzeppelin/contracts/token/ERC20/IERC20.sol<br>@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>contracts/libraries/ERC20Payload.sol<br>@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol<br>@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/handler/contracts/ChakraSettlementHandler.sol | 1| **** | 225 | |hardhat/console.sol<br>contracts/interfaces/ISettlement.sol<br>contracts/interfaces/IERC20CodecV1.sol<br>contracts/interfaces/IERC20Mint.sol<br>contracts/interfaces/IERC20Burn.sol<br>contracts/interfaces/ISettlementHandler.sol<br>contracts/libraries/AddressCast.sol<br>contracts/libraries/Message.sol<br>contracts/libraries/MessageV1Codec.sol<br>@openzeppelin/contracts/token/ERC20/IERC20.sol<br>contracts/BaseSettlementHandler.sol<br>contracts/libraries/ERC20Payload.sol|
-| /solidity/handler/contracts/ChakraToken.sol | 1| **** | 32 | |contracts/interfaces/IERC20Mint.sol<br>contracts/interfaces/IERC20Burn.sol<br>@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol<br>contracts/TokenRoles.sol|
-| /solidity/handler/contracts/ChakraTokenUpgradeTest.sol | 1| **** | 27 | |@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>contracts/TokenRoles.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/handler/contracts/ERC20CodecV1.sol | 1| **** | 33 | |contracts/interfaces/IERC20CodecV1.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>contracts/libraries/ERC20Payload.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/handler/contracts/SettlementSignatureVerifier.sol | 1| **** | 96 | |@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>@openzeppelin/contracts/utils/cryptography/ECDSA.sol<br>@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/handler/contracts/TokenRoles.sol | 1| **** | 34 | |@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/handler/contracts/interfaces/IERC20Burn.sol | ****| 1 | 10 | ||
-| /solidity/handler/contracts/interfaces/IERC20CodecV1.sol | ****| 1 | 4 | |contracts/libraries/ERC20Payload.sol|
-| /solidity/handler/contracts/interfaces/IERC20Mint.sol | ****| 1 | 10 | ||
-| /solidity/handler/contracts/interfaces/ISettlement.sol | ****| 1 | 5 | |contracts/interfaces/ISettlementHandler.sol<br>contracts/libraries/Message.sol|
-| /solidity/handler/contracts/interfaces/ISettlementHandler.sol | ****| 1 | 4 | |contracts/libraries/Message.sol|
-| /solidity/handler/contracts/interfaces/ISettlementSignatureVerifier.sol | ****| 1 | 3 | ||
-| /solidity/handler/contracts/libraries/AddressCast.sol | 1| **** | 36 | ||
-| /solidity/handler/contracts/libraries/ERC20Payload.sol | ****| **** | 17 | ||
-| /solidity/handler/contracts/libraries/Message.sol | ****| **** | 21 | ||
-| /solidity/handler/contracts/libraries/MessageV1Codec.sol | 1| **** | 45 | |contracts/libraries/Message.sol<br>contracts/libraries/AddressCast.sol|
-| /solidity/handler/contracts/tests/BaseSettlement.t.sol | 1| **** | 31 | |@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol<br>contracts/interfaces/ISettlementSignatureVerifier.sol|
-| /solidity/handler/contracts/tests/MessageLib.t.sol | 1| **** | 24 | |contracts/libraries/Message.sol<br>contracts/libraries/MessageV1Codec.sol<br>contracts/libraries/AddressCast.sol<br>contracts/interfaces/IERC20CodecV1.sol<br>contracts/libraries/ERC20Payload.sol|
-| /solidity/handler/contracts/tests/Settlement.t.sol | 1| **** | 241 | |@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol<br>contracts/tests/BaseSettlement.t.sol<br>contracts/interfaces/ISettlementHandler.sol<br>contracts/interfaces/ISettlementSignatureVerifier.sol<br>contracts/libraries/Message.sol|
-| /solidity/handler/contracts/tests/SettlementSignatureVerifier.t.sol | 1| **** | 20 | |contracts/interfaces/ISettlementSignatureVerifier.sol<br>contracts/libraries/AddressCast.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/settlement/contracts/BaseSettlement.sol | 1| **** | 89 | |@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol<br>contracts/interfaces/ISettlementSignatureVerifier.sol|
-| /solidity/settlement/contracts/ChakraSettlement.sol | 1| **** | 221 | |contracts/BaseSettlement.sol<br>contracts/interfaces/ISettlementHandler.sol<br>contracts/interfaces/ISettlementSignatureVerifier.sol<br>contracts/libraries/Message.sol|
-| /solidity/settlement/contracts/ChakraSettlementUpgradeTest.sol | 1| **** | 226 | |contracts/BaseSettlement.sol<br>contracts/interfaces/ISettlementHandler.sol<br>contracts/interfaces/ISettlementSignatureVerifier.sol<br>contracts/libraries/Message.sol|
-| /solidity/settlement/contracts/SettlementSignatureVerifier.sol | 1| **** | 97 | |contracts/interfaces/ISettlementSignatureVerifier.sol<br>@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>@openzeppelin/contracts/utils/cryptography/ECDSA.sol<br>@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/settlement/contracts/interfaces/IERC20Burn.sol | ****| 1 | 10 | ||
-| /solidity/settlement/contracts/interfaces/IERC20Mint.sol | ****| 1 | 10 | ||
-| /solidity/settlement/contracts/interfaces/ISettlement.sol | ****| 1 | 5 | |contracts/interfaces/ISettlementHandler.sol<br>contracts/libraries/Message.sol|
-| /solidity/settlement/contracts/interfaces/ISettlementHandler.sol | ****| 1 | 4 | |contracts/libraries/Message.sol|
-| /solidity/settlement/contracts/interfaces/ISettlementSignatureVerifier.sol | ****| 1 | 3 | ||
-| /solidity/settlement/contracts/libraries/AddressCast.sol | 1| **** | 36 | ||
-| /solidity/settlement/contracts/libraries/Message.sol | ****| **** | 21 | ||
-| /solidity/settlement/contracts/libraries/MessageV1Codec.sol | 1| **** | 42 | |contracts/libraries/Message.sol|
-| /solidity/settlement/contracts/tests/BaseSettlementHandler.t.sol | 1| **** | 71 | |contracts/interfaces/ISettlement.sol<br>contracts/tests/IERC20CodecV1.t.sol<br>contracts/interfaces/ISettlementSignatureVerifier.sol<br>contracts/libraries/AddressCast.sol<br>contracts/libraries/Message.sol<br>contracts/libraries/MessageV1Codec.sol<br>@openzeppelin/contracts/token/ERC20/IERC20.sol<br>@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>contracts/tests/ERC20Payload.t.sol<br>@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol<br>@openzeppelin/contracts/utils/cryptography/ECDSA.sol<br>@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/settlement/contracts/tests/ERC20CodecV1.t.sol | 1| **** | 33 | |contracts/tests/IERC20CodecV1.t.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>contracts/tests/ERC20Payload.t.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/settlement/contracts/tests/ERC20Payload.t.sol | ****| **** | 17 | ||
-| /solidity/settlement/contracts/tests/ERC20SettlementHandler.t.sol | 1| **** | 173 | |contracts/interfaces/ISettlement.sol<br>contracts/tests/IERC20CodecV1.t.sol<br>contracts/interfaces/IERC20Mint.sol<br>contracts/interfaces/IERC20Burn.sol<br>contracts/interfaces/ISettlementHandler.sol<br>contracts/libraries/AddressCast.sol<br>contracts/libraries/Message.sol<br>contracts/libraries/MessageV1Codec.sol<br>@openzeppelin/contracts/token/ERC20/IERC20.sol<br>contracts/tests/BaseSettlementHandler.t.sol<br>contracts/tests/ERC20Payload.t.sol|
-| /solidity/settlement/contracts/tests/IERC20CodecV1.t.sol | ****| 1 | 4 | |contracts/tests/ERC20Payload.t.sol|
-| /solidity/settlement/contracts/tests/MessageLib.t.sol | 1| **** | 24 | |contracts/libraries/Message.sol<br>contracts/libraries/MessageV1Codec.sol<br>contracts/libraries/AddressCast.sol<br>contracts/tests/IERC20CodecV1.t.sol<br>contracts/tests/ERC20Payload.t.sol|
-| /solidity/settlement/contracts/tests/MyToken.t.sol | 1| **** | 32 | |contracts/interfaces/IERC20Mint.sol<br>contracts/interfaces/IERC20Burn.sol<br>@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol<br>contracts/tests/TokenRoles.t.sol|
-| /solidity/settlement/contracts/tests/MyTokenUpgradeTest.t.sol | 1| **** | 27 | |@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>contracts/tests/TokenRoles.t.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| /solidity/settlement/contracts/tests/TokenRoles.t.sol | 1| **** | 34 | |@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol<br>@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol|
-| **Totals** | **26** | **12** | **2192** | | |
+|File                                                                   |       blank    |    comment   |        code|
+|-----------------------------------------------------------------------|----------------|--------------|------------|
+|./cairo/handler/src/utils.cairo                                        |          13    |          2   |         456|
+|./cairo/handler/src/settlement.cairo                                   |          47    |         73   |         373|
+|./cairo/settlement/src/settlement.cairo                                |          47    |         73   |         355|
+|./solidity/settlement/contracts/ChakraSettlementUpgradeTest.sol        |          27    |          5   |         272|
+|./solidity/handler/contracts/ChakraSettlementHandler.sol               |          41    |         86   |         270|
+|./solidity/settlement/contracts/ChakraSettlement.sol                   |          26    |         51   |         267|
+|./cairo/handler/src/handler_erc20.cairo                                |          32    |         27   |         209|
+|./cairo/handler/src/codec.cairo                                        |          13    |          2   |         169|
+|./cairo/handler/src/ckr_btc.cairo                                      |          35    |         31   |         164|
+|./solidity/settlement/contracts/SettlementSignatureVerifier.sol        |          22    |         80   |         113|
+|./solidity/handler/contracts/SettlementSignatureVerifier.sol           |          26    |          4   |         112|
+|./solidity/handler/contracts/BaseSettlementHandler.sol                 |          16    |         18   |         104|
+|./solidity/settlement/contracts/BaseSettlement.sol                     |          21    |         63   |         102|
+|./cairo/handler/src/interfaces.cairo                                   |          19    |          7   |          92|
+|./cairo/settlement/src/interfaces.cairo                                |          15    |          4   |          64|
+|./solidity/handler/contracts/libraries/MessageV1Codec.sol              |          13    |          6   |          57|
+|./solidity/settlement/contracts/libraries/MessageV1Codec.sol           |          12    |         42   |          54|
+|./solidity/handler/contracts/libraries/AddressCast.sol                 |           7    |          1   |          49|
+|./solidity/settlement/contracts/libraries/AddressCast.sol              |          11    |         39   |          49|
+|./solidity/handler/contracts/ChakraToken.sol                           |          10    |         45   |          46|
+|./solidity/handler/contracts/ChakraTokenUpgradeTest.sol                |           8    |          1   |          41|
+|./solidity/handler/contracts/ERC20CodecV1.sol                          |           6    |         28   |          41|
+|./cairo/handler/src/constant.cairo                                     |           4    |          0   |          37|
+|./solidity/handler/contracts/TokenRoles.sol                            |           9    |          1   |          34|
+|./solidity/handler/contracts/libraries/Message.sol                     |           4    |         14   |          21|
+|./solidity/settlement/contracts/libraries/Message.sol                  |           3    |         14   |          21|
+|./solidity/handler/contracts/libraries/ERC20Payload.sol                |           2    |          9   |          17|
+|./cairo/handler/src/lib.cairo                                          |           0    |          2   |          10|
+|./cairo/settlement/src/lib.cairo                                       |           0    |          0   |           2|
+|SUM:                                                                   |         489    |        728   |        3601|
 
-### Files out of scope
-
-*See [out_of_scope.txt](https://github.com/code-423n4/2024-08-chakra/blob/main/out_of_scope.txt)*
+Everything else is out of scope.
 
 ## Miscellaneous
 
