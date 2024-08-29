@@ -136,7 +136,7 @@ None
 
 | Role                                | Description                       |
 | --------------------------------------- | ---------------------------- |
-| Operator                          |               |
+| Operator                          | The Chakra settlement contract address deployed by the protocols              |
 
 ## Describe any novel or unique curve logic or mathematical models implemented in the contracts
 
