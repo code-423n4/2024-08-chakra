@@ -1,10 +1,10 @@
 # Chakra audit details
 
-- Total Prize Pool: $60,500 in USDT
-  - HM awards: $42,720 in USDT
-  - QA awards: $1,780 in USDT
-  - Judge awards: $5,000 in USDT
-  - Validator awards: $3,000 USDT
+- Total Prize Pool: $60,000 in USDT
+  - HM awards: $43,200 in USDT
+  - QA awards: $1,800 in USDT
+  - Judge awards: $4,500 in USDT
+  - Validator awards: $2,500 USDT
   - Scout awards: $500 in USDT
   - Mitigation Review: 7,500 USDT (*This will be a solo mitigation review*)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
