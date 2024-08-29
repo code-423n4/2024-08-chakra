@@ -6,9 +6,6 @@ cairo/handler/src/interfaces.cairo
 cairo/handler/src/lib.cairo
 cairo/handler/src/settlement.cairo
 cairo/handler/src/utils.cairo
-cairo/settlement/src/interfaces.cairo
-cairo/settlement/src/lib.cairo
-cairo/settlement/src/settlement.cairo
 solidity/handler/contracts/BaseSettlementHandler.sol
 solidity/handler/contracts/ChakraSettlementHandler.sol
 solidity/handler/contracts/ChakraToken.sol

@@ -132,16 +132,35 @@ N/A
 
 ## Running tests
 
+This project uses [starknet-foundry](https://foundry-rs.github.io/starknet-foundry/getting-started/installation.html) as the cairo development and testing framework.
+
+The starknet-foundry version and scarb version used in this project are:
+
+```
+snforge 0.20.0
+scarb 2.6.5
+cairo: 2.6.4
+``` 
+
+To install them, use:
+
+```bash
+curl -L https://raw.githubusercontent.com/foundry-rs/starknet-foundry/master/scripts/install.sh | sh
+snfoundryup -v 0.20.0
+curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh -s -- -v 2.6.5
+```
+
+To clone the project and run tests, use:
 ```bash
 git clone --recurse https://github.com/code-423n4/2024-08-chakra.git
 cd 2024-08-chakra/solidity/handler
 npm install
-npx hardhat compile
 npx hardhat test
 cd ../settlement
 yarn
-npx hardhat compile
 npx hardhat test
+cd ../../cairo/handler
+snforge test
 ```
 
 To run code coverage
@@ -156,38 +175,43 @@ npx hardhat coverage
 
 ### Files in scope
 
-|File                                                                   |       blank    |    comment   |        code|
-|-----------------------------------------------------------------------|----------------|--------------|------------|
-|./cairo/handler/src/utils.cairo                                        |          13    |          2   |         456|
-|./cairo/handler/src/settlement.cairo                                   |          47    |         73   |         373|
-|./cairo/settlement/src/settlement.cairo                                |          47    |         73   |         355|
-|./solidity/settlement/contracts/ChakraSettlementUpgradeTest.sol        |          27    |          5   |         272|
-|./solidity/handler/contracts/ChakraSettlementHandler.sol               |          41    |         86   |         270|
-|./solidity/settlement/contracts/ChakraSettlement.sol                   |          26    |         51   |         267|
-|./cairo/handler/src/handler_erc20.cairo                                |          32    |         27   |         209|
-|./cairo/handler/src/codec.cairo                                        |          13    |          2   |         169|
-|./cairo/handler/src/ckr_btc.cairo                                      |          35    |         31   |         164|
-|./solidity/settlement/contracts/SettlementSignatureVerifier.sol        |          22    |         80   |         113|
-|./solidity/handler/contracts/SettlementSignatureVerifier.sol           |          26    |          4   |         112|
-|./solidity/handler/contracts/BaseSettlementHandler.sol                 |          16    |         18   |         104|
-|./solidity/settlement/contracts/BaseSettlement.sol                     |          21    |         63   |         102|
-|./cairo/handler/src/interfaces.cairo                                   |          19    |          7   |          92|
-|./cairo/settlement/src/interfaces.cairo                                |          15    |          4   |          64|
-|./solidity/handler/contracts/libraries/MessageV1Codec.sol              |          13    |          6   |          57|
-|./solidity/settlement/contracts/libraries/MessageV1Codec.sol           |          12    |         42   |          54|
-|./solidity/handler/contracts/libraries/AddressCast.sol                 |           7    |          1   |          49|
-|./solidity/settlement/contracts/libraries/AddressCast.sol              |          11    |         39   |          49|
-|./solidity/handler/contracts/ChakraToken.sol                           |          10    |         45   |          46|
-|./solidity/handler/contracts/ChakraTokenUpgradeTest.sol                |           8    |          1   |          41|
-|./solidity/handler/contracts/ERC20CodecV1.sol                          |           6    |         28   |          41|
-|./cairo/handler/src/constant.cairo                                     |           4    |          0   |          37|
-|./solidity/handler/contracts/TokenRoles.sol                            |           9    |          1   |          34|
-|./solidity/handler/contracts/libraries/Message.sol                     |           4    |         14   |          21|
-|./solidity/settlement/contracts/libraries/Message.sol                  |           3    |         14   |          21|
-|./solidity/handler/contracts/libraries/ERC20Payload.sol                |           2    |          9   |          17|
-|./cairo/handler/src/lib.cairo                                          |           0    |          2   |          10|
-|./cairo/settlement/src/lib.cairo                                       |           0    |          0   |           2|
-|SUM:                                                                   |         489    |        728   |        3601|
+- **Cairo:** 
+
+|File                                             |   blank     |   comment    |       code|
+|-------------------------------------------------|-------------|--------------|-----------|
+|cairo/handler/src/utils.cairo                    |      13     |         2    |        456|
+|cairo/handler/src/settlement.cairo               |      47     |        73    |        373|
+|cairo/handler/src/handler_erc20.cairo            |      32     |        27    |        209|
+|cairo/handler/src/codec.cairo                    |      13     |         2    |        169|
+|cairo/handler/src/ckr_btc.cairo                  |      35     |        31    |        164|
+|cairo/handler/src/interfaces.cairo               |      19     |         7    |         92|
+|cairo/handler/src/constant.cairo                 |       4     |         0    |         37|
+|cairo/handler/src/lib.cairo                      |       0     |         2    |         10|
+|SUM:                                             |     163     |       144    |       1510|
+
+- **Solidity:**
+
+|File                                                                     |   blank    |    comment    |       code|
+|-------------------------------------------------------------------------|------------|---------------|-----------|
+|solidity/settlement/contracts/ChakraSettlementUpgradeTest.sol            |      27    |          5    |        272|
+|solidity/handler/contracts/ChakraSettlementHandler.sol                   |      41    |         86    |        270|
+|solidity/settlement/contracts/ChakraSettlement.sol                       |      26    |         51    |        267|
+|solidity/settlement/contracts/SettlementSignatureVerifier.sol            |      22    |         80    |        113|
+|solidity/handler/contracts/SettlementSignatureVerifier.sol               |      26    |          4    |        112|
+|solidity/handler/contracts/BaseSettlementHandler.sol                     |      16    |         18    |        104|
+|solidity/settlement/contracts/BaseSettlement.sol                         |      21    |         63    |        102|
+|solidity/handler/contracts/libraries/MessageV1Codec.sol                  |      13    |          6    |         57|
+|solidity/settlement/contracts/libraries/MessageV1Codec.sol               |      12    |         42    |         54|
+|solidity/handler/contracts/libraries/AddressCast.sol                     |       7    |          1    |         49|
+|solidity/settlement/contracts/libraries/AddressCast.sol                  |      11    |         39    |         49|
+|solidity/handler/contracts/ChakraToken.sol                               |      10    |         45    |         46|
+|solidity/handler/contracts/ChakraTokenUpgradeTest.sol                    |       8    |          1    |         41|
+|solidity/handler/contracts/ERC20CodecV1.sol                              |       6    |         28    |         41|
+|solidity/handler/contracts/TokenRoles.sol                                |       9    |          1    |         34|
+|solidity/handler/contracts/libraries/Message.sol                         |       4    |         14    |         21|
+|solidity/settlement/contracts/libraries/Message.sol                      |       3    |         14    |         21|
+|solidity/handler/contracts/libraries/ERC20Payload.sol                    |       2    |          9    |         17|
+|SUM:                                                                     |     264    |        507    |       1670|
 
 Everything else is out of scope.
 
