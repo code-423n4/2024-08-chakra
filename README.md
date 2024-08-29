@@ -1,15 +1,15 @@
 # Chakra audit details
 
-- Total Prize Pool: $67,500 in USDC
-  - HM awards: $49,450 in USDC
-  - QA awards: $2,050 in USDC
-  - Judge awards: $5,000 in USDC
-  - Validator awards: $3,000 USDC
-  - Scout awards: $500 in USDC
-  - Mitigation Review: 7,500 USDC (*Opportunity goes to top 3 backstage wardens based on placement in this audit who RSVP.*)
+- Total Prize Pool: $60,500 in USDT
+  - HM awards: $42,720 in USDT
+  - QA awards: $1,780 in USDT
+  - Judge awards: $5,000 in USDT
+  - Validator awards: $3,000 USDT
+  - Scout awards: $500 in USDT
+  - Mitigation Review: 7,500 USDT (*This will be a solo mitigation review*)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts August 28, 2024 20:00 UTC
-- Ends September 11, 2024 20:00 UTC
+- Starts August 29, 2024 20:00 UTC
+- Ends September 12, 2024 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
