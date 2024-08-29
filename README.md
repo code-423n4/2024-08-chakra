@@ -22,15 +22,27 @@ It’s possible for Core Governance and the elections to schedule the same opera
 
 # Overview
 
-[ ⭐️ SPONSORS: add info here ]
+Chakra Network is the first modular settlement layer designed to unlock Bitcoin's liquidity across diverse blockchain ecosystems. 
+
+Chakra offers a high-performance and parallelized modular settlement solution for efficient liquidity flow across Execution Layers and BTC Mainnet.
+
+Chakra Network provides a shared settlement layer that enhances Bitcoin's integration into the broader blockchain landscape, enabling other execution layers such as L2's to focus on execution without the complexities of building settlement infrastructure.
+
+This innovative approach unlocks interconnected liquidity and economic security, fostering a dynamic and vibrant ecosystem.
+
+Execution layers benefit from Chakra's robust liquidity network effects, ensuring secure and scalable transaction processing. 
+
+Chakra Network empowers Bitcoin ecosystem participants to drive growth and innovation within a safe, scalable, and interoperable framework. 
+
+In addition, it enables DeFi projects to settle native BTC to target chains without friction, which extends the composability and utilities of their tokenized assets.
 
 ## Links
 
 - **Previous audits:** None
 - **Documentation:** <https://s3labs.notion.site/Contract-Design-Document-f4aa296f71fb40b1818c0890c40be55c?pvs=4>
-- **Website:** 🐺 CA: add a link to the sponsor's website
-- **X/Twitter:** 🐺 CA: add a link to the sponsor's Twitter
-- **Discord:** 🐺 CA: add a link to the sponsor's Discord
+- **Website:** https://chakrachain.io/home
+- **X/Twitter:** https://x.com/ChakraChain
+- **Discord:** https://discord.gg/chakrachain
 
 ## Scoping Q &amp; A
 
@@ -162,6 +174,8 @@ npx hardhat test
 cd ../../cairo/handler
 snforge test
 ```
+
+*Note: some tests will fail in `solidity/settlement`. They're irrelevant.*
 
 To run code coverage
 

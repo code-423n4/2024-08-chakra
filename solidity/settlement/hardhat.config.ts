@@ -17,31 +17,9 @@ const config: HardhatUserConfig = {
   sourcify: {
     enabled: false,
   },
-  etherscan: {
-    apiKey: {
-      chakradn: "<Key>",
-    },
-    customChains: [
-      {
-        network: "chakradn",
-        chainId: 8545,
-        urls: {
-          apiURL: "https://explorer-dn.chakrachain.io/api",
-          browserURL: "https://explorer-dn.chakrachain.io",
-        },
-      },
-    ],
-  },
   networks: {
     localhost: {
       url: "http://localhost:8545",
-    },
-    chakradn: {
-      chainId: 8545,
-      url: "https://rpcv1-dn-1.chakrachain.io",
-      accounts: [
-        "<AccountPrivateKey>",
-      ],
     },
   },
   contractSizer: {
