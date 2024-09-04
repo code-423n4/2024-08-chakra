@@ -207,7 +207,6 @@ npx hardhat coverage
 
 |File                                                                     |   blank    |    comment    |       code|
 |-------------------------------------------------------------------------|------------|---------------|-----------|
-|solidity/settlement/contracts/ChakraSettlementUpgradeTest.sol            |      27    |          5    |        272|
 |solidity/handler/contracts/ChakraSettlementHandler.sol                   |      41    |         86    |        270|
 |solidity/settlement/contracts/ChakraSettlement.sol                       |      26    |         51    |        267|
 |solidity/settlement/contracts/SettlementSignatureVerifier.sol            |      22    |         80    |        113|
@@ -219,13 +218,11 @@ npx hardhat coverage
 |solidity/handler/contracts/libraries/AddressCast.sol                     |       7    |          1    |         49|
 |solidity/settlement/contracts/libraries/AddressCast.sol                  |      11    |         39    |         49|
 |solidity/handler/contracts/ChakraToken.sol                               |      10    |         45    |         46|
-|solidity/handler/contracts/ChakraTokenUpgradeTest.sol                    |       8    |          1    |         41|
 |solidity/handler/contracts/ERC20CodecV1.sol                              |       6    |         28    |         41|
 |solidity/handler/contracts/TokenRoles.sol                                |       9    |          1    |         34|
 |solidity/handler/contracts/libraries/Message.sol                         |       4    |         14    |         21|
 |solidity/settlement/contracts/libraries/Message.sol                      |       3    |         14    |         21|
 |solidity/handler/contracts/libraries/ERC20Payload.sol                    |       2    |          9    |         17|
-|SUM:                                                                     |     264    |        507    |       1670|
 
 Everything else is out of scope.
 
