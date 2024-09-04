@@ -9,7 +9,6 @@ cairo/handler/src/utils.cairo
 solidity/handler/contracts/BaseSettlementHandler.sol
 solidity/handler/contracts/ChakraSettlementHandler.sol
 solidity/handler/contracts/ChakraToken.sol
-solidity/handler/contracts/ChakraTokenUpgradeTest.sol
 solidity/handler/contracts/ERC20CodecV1.sol
 solidity/handler/contracts/SettlementSignatureVerifier.sol
 solidity/handler/contracts/TokenRoles.sol
@@ -19,7 +18,6 @@ solidity/handler/contracts/libraries/Message.sol
 solidity/handler/contracts/libraries/MessageV1Codec.sol
 solidity/settlement/contracts/BaseSettlement.sol
 solidity/settlement/contracts/ChakraSettlement.sol
-solidity/settlement/contracts/ChakraSettlementUpgradeTest.sol
 solidity/settlement/contracts/SettlementSignatureVerifier.sol
 solidity/settlement/contracts/libraries/AddressCast.sol
 solidity/settlement/contracts/libraries/Message.sol
