@@ -1,0 +1,1558 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-PUBLIC / chakra-aug29
+==============================================================
+
+[08/29/2024 19:16] kartoonjoy (pinned)
+👋 Hello and welcome to the audit channel for the **$60,000 in USDT Chakra** audit!
+
+📆 Audit opens 08/29/2024 20:00 (20:00 UTC) and runs through 09/12/2024 20:00 (20:00 UTC) (14 days).
+
+Please give a warm welcome to the Chakra team, particularly @ballman, @Satoshi Nakamoto, and @arbas and @VincentCaptain, who will be available for questions either here in the channel or via a PRIVATE thread in the UTC+8 timezone(s). 
+
+🤖 **Documentation bot assistance:** For general questions about the codebase, give our documentation bot a try, by tagging `@Docs Wolf` in any thread (private or public) and asking your question. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources.  
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: <https://code4rena.com/audits/2024-08-chakra#top>
+
+{Reactions}
+🔥 (2) 
+
+[08/29/2024 20:41] _killua69_
+🔥
+
+
+[08/29/2024 20:43] itsmetechjay
+Pinned a message.
+
+
+[08/29/2024 21:01] 4gontuk
+We've found our legend, @Satoshi Nakamoto here 👀 !!!
+
+{Reactions}
+🔥 (5) 😹 
+
+[08/30/2024 01:28] rabtai
+LFG
+
+
+[08/30/2024 05:23] 0x46_dustin_22270
+@Satoshi Nakamoto  really? wonderful!!!
+
+
+[08/30/2024 06:09] blckhv
+shouldn't we exclude these 2 test files from the scope?
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/Screenshot_2024-08-30_at_9.08.12_AM-5A9AE.png
+
+
+[08/30/2024 06:15] avoloder
+If you check the files you will see that these two are not test files, but regular ones. The name is a bit misleading 🙂
+
+
+[08/30/2024 08:12] 0xsorrynotsorry
+I don't know the context here, but there are some Sponsors including their tests and deployment scripts in the scope.
+
+
+[08/30/2024 10:01] talfao
+Similar questions were on CodeHawks for different Cairo & EVM audits.
+
+If the automatic tool found issues in Solidity, are these issues invalid also for the Cairo code?
+
+
+[08/30/2024 14:34] vincentcaptain
+I think @kartoonjoy | C4🎇🎇  C4 ppl are able to answer it better but my pov would be taking them invalid as well
+
+
+[08/30/2024 14:35] vincentcaptain
+The credits go to the dev of the tool lol
+
+
+[08/30/2024 14:55] calfun0x
+Hi, i'm getting a lot of failed test in solidity/settlement is this expected?
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/image-8571B.png
+
+
+[08/30/2024 14:58] kartoonjoy
+4analyz3r doesn't produce output for any other languages but solidity. So it must only be valid for Solidity files.
+
+Ultimately it will be up to the judge to assess, though.
+
+
+[08/30/2024 15:03] brivan
+Yes, those are irrelevant tests. *It is mentioned in the README*
+
+{Reactions}
+👍 
+
+[08/30/2024 16:49] 0xhelium
+Is @Docs Wolf  down ?
+
+{Reactions}
+❌ 
+
+[08/30/2024 16:53] kartoonjoy
+Looks like it was out earlier. You tried it more recently?
+
+
+[08/30/2024 16:54] 0xhelium
+Just tried and it worked . It didn’t work hours ago
+
+
+[08/30/2024 16:55] kartoonjoy
+Ok good
+
+
+[08/31/2024 07:25] granat__
+Are sponsors active in this contest?
+
+
+[08/31/2024 07:56] kartoonjoy
+Wardens, @VincentCaptain is also a sponsor team resource who should be tagged in your private threads if there is a delayed response from the other team members.
+
+As always wardens, if a question can be answered utilizing the @Docs Wolf , make that your first line of defense (in a thread). Thank you!
+
+
+[08/31/2024 07:56] vincentcaptain (pinned)
+If you guys didn’t get response for your private thread, please tag me
+
+{Reactions}
+👍 (2) 
+
+[08/31/2024 07:59] kartoonjoy
+Pinned a message.
+
+
+[08/31/2024 18:37] brivan
+@kartoonjoy | C4🎇🎇 I believe the following needs to be updated to include *Starknet*:
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/image-A53AD.png
+
+
+[08/31/2024 18:40] kartoonjoy
+You can see if the sponsor can confirm and assuming it's not urgent, we can tackle it on Tuesday. 🙂
+
+
+[08/31/2024 18:41] brivan
+Sure, tagged you just for clarity.
+*Btw, Starknet is indeed supported since there is Cairo version of the protocol*
+
+
+[08/31/2024 18:42] kartoonjoy
+Cool. If you can remind me on Tuesday, I can look at it in more detail to understand the change needed.
+
+{Reactions}
+👍 
+
+[08/31/2024 18:43] brivan
+Sure, happy weekend.
+
+{Reactions}
+thankyou 
+
+[09/02/2024 19:55] cybrid6924
+Hi guys 
+I see hardhat was used to write tests in this audit 
+
+I want to know if we are allowed to use foundry for our POC
+
+
+[09/02/2024 20:53] avoloder
+Normally we are
+
+
+[09/03/2024 04:33] _muraty
+You can install foundry alongside with Hardhat too, Hardhat supports it.
+
+
+[09/04/2024 04:51] talfao
+Hey Sponsor(cc @VincentCaptain)  I left you one question in private thread some days ago.
+
+
+[09/04/2024 04:52] subsix
+@VincentCaptain gm ser,
+who calls this function > ` settlement.cairo::receive_cross_chain_msg()`
+one of the validators?
+
+
+[09/04/2024 04:53] subsix
+it is meant to be called by offchain right?
+
+
+[09/04/2024 05:04] algebra2k
+right
+
+
+[09/04/2024 05:04] subsix
+validators pick message from soucre chain, sign it then call receive_cross_chain_msg() on the destination chain?
+
+
+[09/04/2024 05:08] algebra2k
+yes
+
+
+[09/04/2024 05:09] subsix
+okay thanks
+
+{Reactions}
+💜 
+
+[09/04/2024 05:33] blckhv
+are there other tokens besides Chakra that will be used in Handler?
+
+
+[09/04/2024 05:43] eme0242
+yes
+
+
+[09/04/2024 08:44] kombainera
+@Satoshi Nakamoto Could you please check my PT ?
+
+
+[09/04/2024 08:58] algebra2k
+hey @yvuchev  what pt?
+
+
+[09/04/2024 09:02] kombainera
+I have created a private thread (the thread is called yvuchev)
+
+
+[09/04/2024 09:08] _polex
+I also pinged you @Satoshi Nakamoto when you have a moment take a look please👏🏽
+
+
+[09/04/2024 09:40] brivan
+@kartoonjoy | C4🎇🎇 The following contracts should be removed from scope:
+`solidity/handler/contracts/ChakraTokenUpgradeTest.sol`
+`solidity/settlement/contracts/ChakraSettlementUpgradeTest.sol`
+It is confirmed by the sponsor in PT thread,
+cc @Satoshi Nakamoto
+
+{Reactions}
+👍 (4) 
+
+[09/04/2024 11:07] deez_nullz
+thanks for posting cause these were throwing me off.
+
+
+[09/04/2024 12:20] zhuyingqiuhua
+Hello guys  I want to write POC using foundry and I install hardhat-foundry plugin in settlement folder. How can I import sol files from handler folder?
+
+
+[09/04/2024 14:24] kartoonjoy
+The 2 tests have been moved to Out of Scope. @Satoshi Nakamoto please let us know if there is any concern. Thanks!
+
+{Reactions}
+thankyou (2) 
+
+[09/05/2024 06:36] _polex
+Starknet is still out of scope, what is the purpose of auditing cairo code then?
+
+
+[09/05/2024 06:36] _polex
+Will it be considered real issues if any in these files? Because if the only chain that supports this language is OOS it makes not sense to report bugs
+
+
+[09/05/2024 07:27] avoloder
+Why is Starknet out of scope?
+
+
+[09/05/2024 07:27] _polex
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/image-C50F6.png
+
+
+[09/05/2024 07:28] _polex
+Not explicit out of scope but it does not mention that starknet wil be supported
+
+
+[09/05/2024 07:28] avoloder
+I guess they didn't fill out the form correctly
+
+
+[09/05/2024 07:44] algebra2k
+Starknet not OOS
+
+
+[09/05/2024 07:47] _polex
+Okay thanks 🙏🏻
+
+
+[09/05/2024 10:17] zdravkohr
+Someone experiencing this issue? 
+`error: Plugin diagnostic: Unknown derive `Display` - a plugin might be missing`
+
+
+[09/05/2024 10:20] 0xshaheen
+yes, on `snforge test`
+
+
+[09/05/2024 10:20] zdravkohr
+Yup
+
+{Reactions}
+🥲 
+
+[09/05/2024 11:24] brivan
+@kartoonjoy | C4🎇🎇 Can we fix this too, to avoid any kind of confusion
+
+
+[09/05/2024 11:24] rouhsamad
+Could you please give us a high level overview of how this system works?
+I did not understand the interaction between Chakra and BTC chain very well, i only saw chainA <=> Chakra <=> ChainB interactions in the documentations
+a brief example would be very helpfull
+
+
+[09/05/2024 11:59] avoloder
+I would also be happy if we could get one example, i.e. a simple scenario of how chain of calls work and in what order exactly. I believe the documentation is not up-to-date and it is hard to verify if the system works as expected or not
+
+
+[09/05/2024 12:09] brivan
+Just spend sometime with the codebase, it will become clear, the codebase is really well documented and straightforward to understand. The codebase has nothing to do with BTC, it's just like a bridging layer.
+
+{Reactions}
+✅ (2) 
+
+[09/05/2024 12:11] granat__
+i think this is the scheme, users call “cross_chain_erc20_settlement” in the handler contract in the chain A, then a CrossChainMsg event is emitted, then validators call “receive_cross_chain_msg” on the chain B, then there will be another CrossChainHandleResult event that will be monitored by validators, that will call “receive_cross_chain_callback” on the settlement contract on chain A
+
+{Reactions}
+👍 (4) 
+
+[09/05/2024 12:55] rouhsamad
+i understand that this in-scope codebase has nothing to do with the BTC chain, my question is not towards the codebase but towards the integration with BTC and how its unlocking BTC liquidity into other chains
+the codebase is a simple bridge between chainA and chainB, but i wanted to understand the interaction between the chakra and BTC chain to gain a deeper understanting of the project and edge cases
+
+
+[09/05/2024 19:49] dag0s_
+Can anyone give me a slight overview of the code ? Just by one paragraph
+
+
+[09/05/2024 20:12] pwnforce
+https://discord.com/channels/810916927919620096/1277955769807142963/1281225110136688640
+
+
+[09/06/2024 10:51] 0xhelium
+Sponsor went ghost on this one ?
+
+{Reactions}
+👀 
+
+[09/06/2024 10:59] kartoonjoy
+https://discord.com/channels/810916927919620096/1277955769807142963/1279349194468884532
+
+
+[09/06/2024 11:00] 0xhelium
+Tagged him , he ended up tagging ballman to respond , but he is missing from PT .
+
+
+[09/06/2024 11:01] kartoonjoy
+Who is missing from the PT? And what does missing mean, just hasn't responded quite yet? And how long has it been?
+
+
+[09/06/2024 11:02] 0xhelium
+Ballman , asked a question since 02/09 no answer
+
+
+[09/06/2024 11:03] 0xhelium
+Anyway ended up writing the report as  is  . Will see during PJQA
+
+{Reactions}
+🔥 this 🫡 
+
+[09/06/2024 11:03] kartoonjoy
+So, I'd ping VC again for an assist. The team just isn't in Discord, as a practice, so they need a nudge periodically.
+
+
+[09/06/2024 11:03] kartoonjoy
+That's probably a good way to handle as well.
+
+
+[09/06/2024 18:21] m4k2
+I'm sorry, and sure it was asked before, but if a vuln is in the solidty part and cairo part, two report should be done ?
+
+
+[09/06/2024 18:31] granat__
+good question 🤔
+
+
+[09/06/2024 18:55] m4k2
+Can the sponsor confirm these and starknet are the only chains in scope : 
+
+`Ethereum,Base,Arbitrum,BSC,Optimism,Polygon,zkSync`
+
+
+[09/07/2024 02:01] subsix
+@kartoonjoy | C4🎇🎇 can this be confirmed? I also have this doubt
+
+
+[09/07/2024 07:42] granat__
+I took a look at the cairo and solidity code, the syntax of course is different, but the logic it’s (almost) the same in both
+
+
+[09/07/2024 07:46] granat__
+The name of the functions and how they work it’s basically the same
+
+
+[09/07/2024 10:07] cybrid6924
+Hy guys, 
+Trying to write invariant tests for a the starknet project, and i cant see any proper docs to do this in snForge, can anyone recommend the best way to go about this?
+
+
+[09/07/2024 15:51] kartoonjoy
+You'll need to use your best judgement there. Then the judge will make the final determination.
+
+
+[09/07/2024 20:39] cybrid6924
+Is it that invariant testing is currently not available for Cairo?
+Cos I got no response from all the platforms I posted this
+
+
+[09/08/2024 07:38] _muraty
+Started a thread.
+
+
+[09/08/2024 14:17] welith
+You probably moved on here, however, you need to have scarb to exactly version 2.6.5 to run everything normally
+
+{Reactions}
+🙏 
+
+[09/08/2024 14:23] hgq2wnl
+@VincentCaptain which events are required to be emitted for a validator to sign a transcation and call receive_cross_chain_msg?
+
+
+[09/08/2024 14:24] brivan
+Mentioned on the docs: `CrossChainMsg`
+
+{Reactions}
+👍 
+
+[09/08/2024 14:25] brivan
+Logically speaking, fixing one issue does not fix the other, so two separate reports
+
+{Reactions}
+👍 (2) 
+
+[09/08/2024 14:25] hgq2wnl
+no others right?
+
+
+[09/08/2024 14:26] brivan
+Yes, Settlement contract is the contract interfaced by the validators, not the handler contracts.
+All the handlers connect with the settlement contract.
+
+{Reactions}
+👍 (2) 
+
+[09/08/2024 15:42] 0xhelium
+You can just pack it in one report , if it then is deemed to be two separate reports , judge will access it
+
+
+[09/08/2024 17:29] granat__
+Hey, when sending submissions, we have to put what programming language are we referring or not? If a problem is in both the contracts
+
+
+[09/08/2024 17:30] 0xhelium
+Say it clearly and embed code and link to the code . It should be enough I think
+
+
+[09/08/2024 17:31] granat__
+okay
+
+
+[09/08/2024 17:45] granat__
+Last question, so if i submit a finding related to solidity code and this finding is also valid for the cairo code, the judge should pack in one report or split in 2 right? Also if i do not mention cairo
+
+
+[09/08/2024 17:46] 0xhelium
+I was just making some suggestion . You can either pack it in one single report with all the code affected in both solidity or Cairo ( in case it’s the same bug ) or split it in two different reports
+
+
+[09/08/2024 17:47] 0xhelium
+C4 Judges are very competent, so they will make the right decision
+
+{Reactions}
+👍 
+
+[09/08/2024 17:48] granat__
+Okay, just in case i submit a problem thinking at  solidity, when then this would not be a problem for cairo….
+
+
+[09/08/2024 19:53] rabtai
+Does wolf wofk on DM?
+
+
+[09/09/2024 03:45] samuselderg
+No, just when tagged in a thread in the channel of the audit. It only has context of the audit content related to each channel. But if you want to make sure it's private, make sure it's a *private thread*, that way the other Wardens won't be able to see it
+
+{Reactions}
+thankyou 
+
+[09/09/2024 08:42] blckhv
+what are the trusted roles? The README shows operators, but there are no such roles in the contracts
+
+
+[09/09/2024 09:36] avoloder
+Yes there are. Search for addOperator or smth
+
+
+[09/09/2024 09:37] blckhv
+this is the handler
+
+
+[09/09/2024 10:04] avoloder
+?
+
+
+[09/09/2024 12:43] welith
+Are the sponsors active on this one?
+
+
+[09/09/2024 12:58] kartoonjoy
+Do you have a thread that needs attention? If its been a min without a response, please also ping VincentCaptain as well.
+
+Thats assuming its not a question that could be answered by the DocsWolf?
+
+
+[09/09/2024 12:59] welith
+It's been a couple of hours already, tagged both Satoshi and Vincent
+
+{Reactions}
+👍 
+
+[09/09/2024 13:00] welith
+I guess they might be at different timezones, will give it some more time 🙂
+
+{Reactions}
+💯 
+
+[09/09/2024 13:28] welith
+Check the `ckr_btc.cairo` file, it uses operators for token operations
+
+
+[09/10/2024 08:19] welith
+Just notifying that the sponsors went ghost on this one 😄
+
+{Reactions}
+cat 
+
+[09/10/2024 08:57] pascal9476
+Is there a proper documentation explaining roles to get a quick overview 
+Kinda late on this one 🙂
+
+{Reactions}
+thisisfine (2) 👀 (3) 
+
+[09/10/2024 20:55] avoloder
+Stupid question, but just to confirm: You should be able to send messages from Starknet to EVM (i.e., send it from Cairo handler and receive it with Solidity settlement)? Right?
+
+{Reactions}
+👍 
+
+[09/10/2024 22:06] tumelo_crypto
+yes
+
+
+[09/10/2024 23:28] pascal9476
+Some issues are prevalent on Cairo and evm side of the codebase
+
+
+[09/10/2024 23:28] pascal9476
+How will they be judged ?
+
+
+[09/11/2024 02:36] m4k2
+It was discussed a bit earlier, you need to write the report for each type 😶‍🌫️
+
+
+[09/11/2024 04:55] granat__
+for each vulnerability, then the judge should split in two if they are prevalent
+
+
+[09/11/2024 05:32] 0xabhay.
+1k+ submission loading
+
+{Reactions}
+cat 
+
+[09/11/2024 06:28] francise._
+Starknet to EVM yes
+
+But I don't think it's possible to send from a Cairo handler to a Solidity settlement directly through the contracts
+
+Someone can correct me if I'm wrong
+
+
+[09/11/2024 06:29] avoloder
+Not directly but through Chakra events
+
+
+[09/11/2024 06:29] francise._
+Exactly
+
+
+[09/11/2024 06:30] avoloder
+Yeah, that's what I thought 🙂 🤝
+
+{Reactions}
+🤝 
+
+[09/11/2024 06:36] pascal9476
+To be sure receive _cross_chain callback  is used to retrieve messages sent on that chain that wasn’t processed on the other side ?
+
+{Reactions}
+👍 
+
+[09/11/2024 06:40] welith
+the callback is invoked on the originator chain by the validator in response to a processed transaction on the receiver chain
+
+
+[09/11/2024 06:40] welith
+it could be either for a successful one or a failed one
+
+{Reactions}
+👍 
+
+[09/11/2024 07:22] _polex
+Hey guys do you know what does this refer to?
+
+
+[09/11/2024 07:22] _polex
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/image-64BA6.png
+
+
+[09/11/2024 07:22] _polex
+Like the only tokens that integrate are its own implementation
+
+
+[09/11/2024 07:44] pascal9476
+According to the readme there’s only one trusted role ??
+
+
+[09/11/2024 08:07] 0xhelium
+Real reason peoples are asking in here is because sponsor is nowhere to be found in PT
+
+
+[09/11/2024 08:08] 0xhelium
+This results in free hints for other wardens and load of submissions par ricochet
+
+
+[09/11/2024 08:10] tigerfrake
+Insane asking @Docs Wolf questions publicly too:4739_Skeletor:
+
+
+[09/11/2024 08:11] 0xhelium
+Didn’t see this one , but I assume wardens that does it are relatively new wardens so they don’t know they are giving free hints
+
+
+[09/11/2024 08:16] avoloder
+I asked sponsor a question with regard to one specific decision and got response generated from ChatGPT as of why this might be a good decision generally 🤦‍♂️
+
+{Reactions}
+10_10 
+
+[09/11/2024 08:25] welith
+sponsors are doing quite badly on this one 😄 I asked them about some explanations and they literally replied with “I cannot provide any” 😀
+
+
+[09/11/2024 09:03] 0xabhay.
+Wait, what? I asked the questions, and the sponsor responded on time. 🙂
+
+{Reactions}
+👆 (3) 
+
+[09/11/2024 09:51] hex_panda
+Guys, can the ERC20 token in the ChakraSettlementHandler be any ERC20 token? Or is it a wrapped standard token? Please help clarify that 🙏
+
+
+[09/11/2024 10:40] granat__
+the docs says any ERC20 token
+
+
+[09/11/2024 11:57] rodiontr
+does this include weird erc20?
+
+
+[09/11/2024 11:57] rodiontr
+because they're all out of scope according to the docs
+
+
+[09/11/2024 11:58] granat__
+those are the ERC20 token behaviors in scope
+
+
+[09/11/2024 11:59] granat__
+all those problems related to ERC20 are out of scope
+
+{Reactions}
+👍 
+
+[09/11/2024 11:59] rodiontr
+ty
+
+
+[09/11/2024 12:45] pascal9476
+According to c4 rules does breaking the invariants states in the contest readme counts as a medium ?
+
+
+[09/11/2024 12:55] tumelo_crypto
+depends on the impact, if its important sure if not then it'll be a low
+
+{Reactions}
+👍 
+
+[09/11/2024 13:02] granat__
+guys, just a curiosity, what tools do you use to make a PoC on a Cairo codebase?
+
+
+[09/11/2024 14:06] hex_panda
+Thank you so much for your reply, yeah, I was confused by the "out-of-scope token behaviors" just like Rodion mentioned.
+
+
+[09/11/2024 15:06] 0xabhay.
+any erc20 token will be in scope example USDC , WETH , USDT .
+
+{Reactions}
+👍 
+
+[09/11/2024 16:49] 0xhelium
+Some of the above have weird behaviors , make sure to check the erc20 out of scope section so you don’t waste your time submitting weird erc20 issues
+
+{Reactions}
+🫡 (2) 
+
+[09/11/2024 20:03] 0xabhay.
+what there is still time left
+
+
+[09/11/2024 20:04] itsmetechjay
+Looks like our C4 bot was a bit over-eager.  You still have ~24 hours.
+
+{Reactions}
+😂 👍 
+
+[09/11/2024 21:14] kirill_taran
+Started a thread.
+
+
+[09/12/2024 11:09] kirill_taran
+I don't think @Docs Wolf  is useful in this audit. Cairo code it generates is not even Cairo. it can only help with basic theoretical questions here, no real hints
+
+but yes, I just don't know how to create private thread in Discord 😂
+
+
+[09/12/2024 11:48] kartoonjoy
+Look for the plus symbol to the left of where you're typing. Click + -> Create Thread. Once the thread opens, check the Private Thread box.
+
+{Reactions}
+🙏 
+
+[09/12/2024 12:22] avoloder
+It is not supposed to give you hints but answer the questions you have about the project or its documentation
+
+{Reactions}
+👍 
+
+[09/12/2024 13:25] 0xhelium
+Peoples are very smart here , so any little question you ask the doc wolf in public they assume it’s because you think there is an issue . And trust me they will find that issue .
+
+
+[09/12/2024 13:26] 0xhelium
+You could miss a solo finding just like that . With Xp you will realize what I’m talking about
+
+
+[09/12/2024 14:42] tumelo_crypto
+Yes definitely, he will learn in time 😂
+
+
+[09/12/2024 14:44] hex_panda
+Guys, anyone who is interested in sharing and discussing the submitted findings together privately AFTER THIS CONTEST ENDS, please DM me 🙂👋 I believe that's not prohibited by the C4 rules, is it?
+
+{Reactions}
+🤚 
+
+[09/12/2024 14:45] tumelo_crypto
+I'm pretty sure it is
+
+
+[09/12/2024 14:46] tumelo_crypto
+check the docs
+
+{Reactions}
+❤️ 
+
+[09/12/2024 15:14] brivan
+> it can only help with basic theoretical questions here, no real hints
+Please don't tell me you were using Docs wolf for potential bugs hints.
+
+The bot is perfectly helpful to understand the protocol concepts, contracts functionalities, how smart contracts are connected, .etc
+Personally it saved me a lot of time on understanding codebase and even helped me avoiding the chat with sponsors. GG to C4 team for this product
+
+{Reactions}
+➕ (6) 
+
+[09/12/2024 16:56] 18a6
+can we have that updated in contest readme please
+
+
+[09/12/2024 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **Chakra** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Feel free to ping a Civics-Admin if you have questions along the way!
+
+{Reactions}
+🫡 
+
+[09/12/2024 20:08] haxatron1
+I just speedran this audit in 8 hours...
+
+
+[09/12/2024 20:08] haxatron1
+:megalaugh:
+
+
+[09/12/2024 20:09] granat__
+How many subs?
+
+
+[09/12/2024 20:09] brivan
+Bro, Neither Boost nor Symbiotic.
+
+
+[09/12/2024 20:10] brivan
+Which contest channel I won't find you
+
+
+[09/12/2024 20:11] brivan
+I'd say +800 for this one
+
+
+[09/12/2024 20:12] granat__
+pretty normal right?
+
+
+[09/12/2024 20:12] granat__
+however i would say the same
+
+
+[09/12/2024 20:13] mctoady
+https://tenor.com/view/lulchicken-drogba-everywhere-i-go-i-see-his-face-gif-25955687
+
+{Embed}
+https://tenor.com/view/lulchicken-drogba-everywhere-i-go-i-see-his-face-gif-25955687
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/lulchicken-drogba-E559C.png
+
+
+[09/12/2024 20:16] tumelo_crypto
+i disagree, not many people know cairo so it won't be more than 500, i'd say less than 200 probably
+
+
+[09/12/2024 20:16] 0xshaheen
+Nah! The codebase was rekt!
+
+
+[09/12/2024 20:16] 0xshaheen
+800 seems good
+
+
+[09/12/2024 20:16] brivan
+So, u submitted 12 issues in 8 hours? :4739_Skeletor:
+
+{Reactions}
+🔥 
+
+[09/12/2024 20:17] brivan
+836 submissions
+
+{Reactions}
+🔥 (3) 
+
+[09/12/2024 20:18] tumelo_crypto
+I don't see the findings repo being posted in the sr channel, how do you know?
+
+
+[09/12/2024 20:18] brivan
+github directly
+
+
+[09/12/2024 20:19] tumelo_crypto
+oh okay, let me go check
+
+
+[09/12/2024 20:19] granat__
+12 🤔
+
+
+[09/12/2024 20:20] _theblackpanther
+you spent 8 days and i know it
+
+
+[09/12/2024 20:20] tumelo_crypto
+thanks, found it
+
+
+[09/12/2024 20:20] _theblackpanther
+:kekdead:
+
+
+[09/12/2024 20:21] granat__
+how traiforge got +1600 it’s incredible
+
+
+[09/12/2024 20:29] _theblackpanther
+wen is kakarot? any ETA
+
+
+[09/12/2024 20:30] tumelo_crypto
+I'm wondering the same
+
+
+[09/12/2024 20:31] tumelo_crypto
+They'll probably post it over the weekend
+
+
+[09/12/2024 20:31] _theblackpanther
+that will be a big one, and interesting 🤨
+
+
+[09/12/2024 20:34] haxatron1
+@Shaheen nice findings
+
+{Reactions}
+❤️‍🔥 
+
+[09/12/2024 20:34] haxatron1
+🔥
+
+
+[09/12/2024 21:42] 4gontuk
+I am sure Cairo part will have the most bugs. Btw exciting to see the number of Cairo contract researchers growing every day!
+
+
+[09/12/2024 21:51] 18a6
+bro doing a casual 9-5 shift
+
+{Reactions}
+kewk (3) 
+
+[09/12/2024 22:10] eme0242
+The Cairo logic isn’t that complex yunno
+
+{Reactions}
+👆 (2) 
+
+[09/12/2024 22:30] 4gontuk
+Yeap
+
+
+[09/12/2024 23:00] 0xshaheen
+Thanks Sir! Thats something I have heard for the very first time! You just made my day 🙂🫡
+
+
+[09/12/2024 23:23] kirill_taran
+I don't tell that AI is useless, and I really appreciate that C4 team made it available to everyone for free.
+
+I only told that in this particular audit, it's not helpful because apparently it isn't trained on enough Cairo materials, only on the codebase itself. Check the public "docs wolf sandbox" thread and see what it generates, the syntax of Cairo it uses is either non existent, or older versions, in the Wolf's model it doesn't look like Rust at all, more like JS.
+
+
+[09/13/2024 04:55] tigerfrake
+Alot of admin-related issues, damn. If admin does this, this happens here, user does that there and  boom! A PROBLEM, haha😂😂
+
+
+[09/13/2024 08:29] mrjorystewartbaxter
+Sorry to ask this how can I see the issues submitted? Thnx
+
+
+[09/13/2024 08:35] avoloder
+You can't. Only those wardens with the SR role can see them
+
+
+[09/13/2024 08:35] mrjorystewartbaxter
+Ahh understood. Thnx,
+
+
+[09/13/2024 09:26] virpysec
+Hey, bit of an odd request, but im also doing the Symbiotic contest right now, do you know of the best way to get an invite to the cantina discord? It seems pretty locked down
+
+
+[09/13/2024 10:01] 0xshaheen
+Discord link is available in their Docs*
+Search Cantina Docs and go to links section
+
+
+[09/13/2024 10:06] virpysec
+ahh thank you for that
+
+{Reactions}
+🫡 
+
+[09/13/2024 10:45] 4gontuk
+Got it?
+
+
+[09/14/2024 12:49] virpysec
+yeah, thanks
+
+
+[09/19/2024 12:34] tobi0x18
+how many submissions?
+
+
+[09/19/2024 17:12] avoloder
+Someone said 836
+
+{Reactions}
+👍 
+
+[09/22/2024 05:11] sivanesh_808
+Hi guys ,
+
+When can we expect results ?
+
+
+[09/22/2024 05:55] tigerfrake
+It's gonna take another minute pal. Though Sponsors already assigning tags. PJQA Loading..
+
+{Reactions}
+👀 💪 
+
+[09/24/2024 12:56] xor0v0
+amazing
+
+
+[09/25/2024 07:45] cybrid6924
+
+
+{Stickers}
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/809210904263917618-6A437.png
+
+
+[09/30/2024 13:04] mansa11
+Any update?
+
+
+[09/30/2024 15:28] 0xdemonnn
+https://tenor.com/view/kyriostsahs-lonely-waiting-quarantine-life-gif-18073672
+
+{Embed}
+https://tenor.com/view/kyriostsahs-lonely-waiting-quarantine-life-gif-18073672
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/kyriostsahs-lonely-80C0F.png
+
+
+[09/30/2024 18:34] _theblackpanther
+🫂
+
+
+[10/01/2024 07:09] rodiontr
+We’re somewhere between sponsor review and the judging phase
+
+{Reactions}
+💀 (3) 🫡 
+
+[10/01/2024 13:13] serpent0x
+https://tenor.com/view/waiting-titanic-gif-25999423
+
+{Embed}
+https://tenor.com/view/waiting-titanic-gif-25999423
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/waiting-titanic-8E949.png
+
+{Reactions}
+😂 (3) 
+
+[10/02/2024 09:09] brivan
+@kartoonjoy | C4🎇🎇 Another Chakra audit ?
+https://code4rena.com/audits/2024-10-chakra
+
+{Reactions}
+💯 (3) 
+
+[10/02/2024 11:43] _theblackpanther
+Is it normal in c4 or judging is very slow on this one?
+
+
+[10/02/2024 12:36] rodiontr
+Pretty normal, it’s 20 days only
+
+{Reactions}
+😂 
+
+[10/02/2024 12:36] haxatron1
+this time, its naruto shippuden
+
+{Reactions}
+😂 (7) 
+
+[10/02/2024 13:00] brivan
+Not judge issue, I believe. Many primary issues (+70) and the sponsor is slow reviewing them. At some point the judge will step in (maybe next week)
+
+{Reactions}
+👀 👆 
+
+[10/02/2024 13:02] brivan
+I watched all the 500 episodes, I think I have advantage here :4739_Skeletor:
+
+{Reactions}
+😂 
+
+[10/02/2024 13:45] welith
+you mean to say that there are 70+ findings? 😄
+
+{Reactions}
+👀 
+
+[10/04/2024 14:51] tigerfrake
+Lol, I'm sure PJQA will filter out the noise😂
+
+{Reactions}
+😀 
+
+[10/09/2024 13:53] subsix
+wen ;-;
+
+
+[10/09/2024 15:17] thebrittfactor
+Heads up - we just kicked off the judging phase yesterday, so it'll probably be next week before PJ QA begins. 🙂
+
+{Reactions}
+🫡 (11) 
+
+[10/14/2024 13:59] enami_el
+Any update? 👀
+
+
+[10/14/2024 17:59] sivanesh_808
+Waiting for an update!!!
+
+
+[10/15/2024 14:46] brivan
+Judge hasn't started yet
+
+
+[10/15/2024 14:50] 0xhelium
+Who knows ? Maybe he is working offchain ?
+
+{Reactions}
+💯 (4) 
+
+[10/16/2024 11:14] mylifechangefast.eth_70767
+Nobody knows
+
+
+[10/17/2024 11:30] avoloder
+There are not that many contests in the judging phase right now, why is it taking so long?
+
+
+[10/17/2024 12:26] rodiontr
+Cairo + a lot of dups and controversial issues
+
+
+[10/17/2024 12:52] p4y4b13
+when can we expect results ?
+
+
+[10/17/2024 14:45] tigerfrake
+Repo has been quiet for quite some time.
+
+
+[10/17/2024 14:46] rodiontr
+yeah judge just works offline and I think soon pjqa will start
+
+
+[10/17/2024 14:47] tigerfrake
+A'ight. Let's hope that's the case
+
+
+[10/17/2024 16:24] brivan
+*judge works offline*, this is the first time I see such thing on C4. Usually, updates happen in real-time on the github issues.
+
+
+[10/17/2024 16:58] itsmetechjay
+ℹ️ Hey all, even though you may not see activity in the repo, the judge is actively reviewing the issues. We really appreciate your patience as we work to move things forward as fast as we can.
+
+{Reactions}
+🙏 (4) 
+
+[10/21/2024 16:23] 0xshaheen
+Results before New Year? 👀
+
+
+[10/21/2024 18:04] sivanesh_808
+Lolz 😂😂
+
+
+[10/22/2024 19:22] serpent0x
+https://tenor.com/view/waiting-titanic-gif-25999423
+
+{Embed}
+https://tenor.com/view/waiting-titanic-gif-25999423
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/waiting-titanic-8E949.png
+
+{Reactions}
+👀 (2) 😂 (2) 
+
+[10/23/2024 06:28] tigerfrake
+They've got another contest scheduled to start  in 3 days. Ain't sure it's gonna happen before the first release
+
+{Reactions}
+😂 (2) 
+
+[10/24/2024 11:56] brivan
+Judging has started, PJQA should be soon
+
+
+[10/24/2024 19:29] sivanesh_808
+Started?
+
+
+[10/25/2024 05:29] 0xshaheen
+I have even forgot the codebase by now 😂 😭
+
+{Reactions}
+😂 (6) 
+
+[10/25/2024 05:57] 0xshaheen
+i was reading all the findings, one after the other, i came across an interesting finding and half way through, i was like "oh this is also a good finding" and then realized it was my own submission 😂 😅
+
+{Reactions}
+😂 (14) 
+
+[10/25/2024 06:42] tigerfrake
+Lemme go invalidate it, 😂
+
+{Reactions}
+🤣 (5) 😂 
+
+[10/26/2024 07:44] mansa11
+This hasn’t been sorted and there’s a new chakra contest coming up lmao
+
+
+[10/26/2024 08:24] tigerfrake
+It's just gonna get pushed
+
+
+[10/29/2024 08:47] avoloder
+How the PJQA is going? Is there a light at the end of the tunnel?
+
+{Reactions}
+👍 
+
+[10/29/2024 09:38] 0xshaheen
+there are not many escalations, so I'm hopeful too see the results in a week InShaaAllah
+
+
+[10/29/2024 09:44] avoloder
+Thanks for the update 😁
+
+{Reactions}
+🫡 (2) 
+
+[10/31/2024 14:17] sivanesh_808
+Any update?
+
+
+[10/31/2024 14:22] rodiontr
+Just pjqa
+
+
+[10/31/2024 14:23] rodiontr
+I think will be finalized soon
+
+
+[10/31/2024 14:25] rodiontr
+Maybe one more week
+
+
+[10/31/2024 14:46] brivan
+It seems the judge was working offline to resolve comments, and now he started resolving most of the issues live quickly.
+It can be Friday/early next week
+
+
+[10/31/2024 14:55] sivanesh_808
+👍
+
+
+[11/01/2024 20:56] brivan
+@thebrittfactor | C4 - Away I just noticed Chakra logo is appearing on profiles. Can we expect announcement by the end of today, or early next week?
+
+
+[11/01/2024 20:57] thebrittfactor
+More than likely next week. We are still working on calculating the awards 🙂
+
+{Reactions}
+👍 (3) 
+
+[11/05/2024 16:54] 18a6
+https://tenor.com/view/wen-when-mob-gif-10060397160930223678
+
+{Embed}
+https://tenor.com/view/wen-when-mob-gif-10060397160930223678
+Code4rena - ARCHIVE-PUBLIC - chakra-aug29 [1277955769807142963].txt_Files/wen-when-A12ED.png
+
+{Reactions}
+pepemcd (7) cat (4) 🔥 
+
+[11/05/2024 16:57] 18a6
+im tired boss
+
+
+[11/05/2024 16:57] 18a6
+longest burger wait ever
+
+{Reactions}
+😂 (9) 
+
+[11/05/2024 17:12] brivan
+@thebrittfactor | C4 - Away Can we expect announcement today?
+
+
+[11/06/2024 04:23] tigerfrake
+Given that the next Chakra contest starts in 3 days,  results may be out before then.
+
+
+[11/06/2024 17:46] thebrittfactor
+🤑 🎉  Awards for **Chakra**:
+
+$11,822.09 USDT » @Abdessamed
+$6,200.71 USDT » @fyamf
+$4,527.00 USDT » @shaflow2
+$3,568.67 USDT » @yesofcourse
+$3,344.39 USDT » @ABAIKUNANBAEV
+$1,810.21 USDT » SBSecurity (@blckhv and @Slavcheww)
+$1,578.06 USDT » AllTooWell (@zhuying and @0x996)
+$1,470.14 USDT » @Tigerfrake
+$1,400.14 USDT » @said
+$1,282.88 USDT » @klau5
+$873.70 USDT » @Emmanuel
+$855.66 USDT » @Granat
+$785.60 USDT » @Draiakoo
+$710.55 USDT » @0xNirix
+$564.26 USDT » @Xor
+$542.77 USDT » @b0g0
+$450.50 USDT » @pwnforce
+$337.65 USDT » @Sabit
+$332.56 USDT » @0x18a6
+$299.75 USDT » @jesjupyter
+$256.37 USDT » mjcpwns
+$174.71 USDT » @haxatron
+$171.37 USDT » @rbserver
+$131.81 USDT » @0xb0k0
+$127.99 USDT » @audinarey
+$116.59 USDT » @0x37
+$106.17 USDT » @mojito_auditor
+$96.36 USDT » @gesha17
+$89.77 USDT » @Calcifer
+$75.82 USDT » @avoloder
+$74.39 USDT » @joicygiore
+$72.69 USDT » @0xbeWater0Given
+$65.19 USDT » @agent3bood
+$50.95 USDT » @Drynooo
+$50.67 USDT » @MrPotatoMagic
+$49.84 USDT » @ZdravkoHr
+$47.22 USDT » @Shaheen
+$45.67 USDT » @Vitali Gorgut
+$43.91 USDT » @Topmark
+$41.83 USDT » @0xCoinymous
+$40.99 USDT » @EncryptedPasta
+$39.54 USDT » @m4k2
+$38.91 USDT » @jasonxiale
+$38.27 USDT » @peanuts
+$36.04 USDT » DPS (@0xJaeger and @yvuchev)
+$33.20 USDT » @Breeje
+$28.45 USDT » @calfun0x
+$22.13 USDT » @moksha9406
+$22.07 USDT » @aldarion
+
+
+[11/06/2024 17:47] thebrittfactor
+$15.12 USDT » @0xTheBlackPanther
+$10.30 USDT » @Rhaydden
+$3.01 USDT » @kutu
+$2.45 USDT » @bhilare_
+$2.34 USDT » LuarSec (@GhK3Ndf and lod1n)
+$2.27 USDT » @13u9
+$2.03 USDT » @Agontuk
+$1.82 USDT » @franfran20
+$1.78 USDT » @Cybrid
+$1.78 USDT » @DanielArmstrong
+$1.78 USDT » @IzuMan
+$1.78 USDT » Subroutine (@Subsix and @p4y4b13)
+$1.75 USDT » @0xabhay
+$1.75 USDT » @0xpetern
+$0.83 USDT » NexusAudits (@cheatc0d3 and @zanna)
+$0.81 USDT » @atoko
+$0.59 USDT » @tekkac
+$0.28 USDT » @PASCAL
+$0.09 USDT » @0xHelium
+$0.09 USDT » @Bauchibred
+$0.09 USDT » @Brene
+$0.09 USDT » @Trooper
+$0.07 USDT » @0xDemon
+$0.07 USDT » @0xSolus
+$0.07 USDT » @0xAstronatey
+$0.07 USDT » @Decap
+$0.07 USDT » @inspecktor
+$0.07 USDT » @Tonchi
+$0.07 USDT » @Tumelo_Crypto
+$0.07 USDT » @Abhishek_thaku_r
+
+
+[11/06/2024 17:47] thebrittfactor
+$0.03 USDT » @10ap17
+$0.03 USDT » @4rdiii
+$0.03 USDT » @BY_DLIFE
+$0.03 USDT » @DimaKush
+$0.03 USDT » @JanuaryPersimmon2024 
+$0.03 USDT » @Kaysoft 
+$0.03 USDT » @Omik
+$0.03 USDT » @Shubham 
+$0.03 USDT » @Taiger
+$0.03 USDT » @eierina
+$0.03 USDT » @kind_killerwhale 
+$0.03 USDT » @Minato7namikazi
+$0.02 USDT » @Sparrow 
+$0.02 USDT » @biakia
+$0.02 USDT » @yudan
+
+🏁 Findings summary
+-------------------------------------
+14 High risk findings
+12 Med risk findings
+150 wardens contributed
+
+Top Hunter: Abdessamed
+Top Gatherer: Abdessamed and fyamf
+Top QA report: SBSecurity
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+⚠️ Awardees, be sure to review [this announcement](https://discord.com/channels/810916927919620096/810929015509483554/1272625452909072415) and fill in your tax info if you haven't already. This must be completed within 30 days (i.e. before Friday, 06 December 2024 17:45) to receive your award distribution for this audit.
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+
+[11/06/2024 17:56] _theblackpanther
+@Abdessamed this is big one congrats 🥂 
+
+Congrats everyone 🍉🍺
+
+{Reactions}
+🥳 (5) 🫡 (2) 🍉 (2) 
+
+[11/06/2024 17:58] shaflow_
+Congratulations, @Abdessamed Made a big step in completing your retirement plan.😂😂
+Congrats everyone.
+
+{Reactions}
+😂 
+
+[11/06/2024 18:00] tobi0x18
+Congrats great sis~🥳 🥳 🥳
+
+{Reactions}
+🔥 (2) 
+
+[11/06/2024 18:26] ililhunterlili
+My homie made it,
+
+Congrats @Abdessamed
+
+{Reactions}
+🔥 (5) 
+
+[11/06/2024 18:31] avoloder
+Well done guys, congrats everyone! 👏 Congrats @Abdessamed, you crushed it 😁 Looking forward to the report, to see everything I've missed and keep learning 🫡
+
+{Reactions}
+🫡 
+
+[11/06/2024 18:35] brivan
+Indeed 😂 $64K more before the retirement.
+
+
+[11/06/2024 18:37] brivan
+@thebrittfactor | C4 - Away Just curious about gatherer bonus. I can see that I got 16 valid HM and fyamf got 14 HM, but we both got the bonus split, is it because of his solo?
+
+
+[11/06/2024 19:12] liveactionllamac4
+Partial credit findings don't count toward Top Gatherer. After those are excluded, you each had 8 highs and 5 mediums.
+
+{Reactions}
+thankyou (3) 
+
+[11/06/2024 20:16] 18a6
+wow @Abdessamed it was always a question of when not if
+
+{Reactions}
+❤️ (2) 
+
+[11/06/2024 21:17] granat__
+Congrats everyone 💪
+
+{Reactions}
+🚀 (2) 
+
+[11/06/2024 21:28] cloudellie
+Congrats @Abdessamedon your win! 🎉 :hi5: 
+And :clapping: to all!
+
+{Reactions}
+thankyou (5) 
+
+[11/07/2024 01:20] iam0x996
+Hello sir @🦙 liveactionllama | C4 
+
+When will the final audit report be released?
+
+
+[11/07/2024 01:21] iam0x996
+Congrats @Abdessamed  🎉 :hi5:
+
+{Reactions}
+🫡 
+
+[11/07/2024 09:26] cloudellie
+Report timing usually depends on the sponsor's approval, so can vary quite a bit, but if they approve quickly it could be within the next week or two.
+
+
+[11/07/2024 09:47] iam0x996
+Thank you
+
+{Reactions}
+hi5 (2) 
+
+[11/15/2024 23:44] itsmetechjay
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted in 12/07/2024 03:53. Please make sure to grab anything you might need before then.
+
+
+[11/27/2024 20:59] elvisvan
+lol which one was that?
+
+
+[11/28/2024 13:08] 18a6
+@Jay | C4 I understand rewards are distributed, I just submitted my tax information since this was my first reward on c4. Should I expect to be payed?
+
+
+[12/03/2024 03:52] itsmetechjay
+Started a thread.
+
+
+[12/05/2024 23:08] itsmetechjay
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 292 message(s)
+==============================================================
